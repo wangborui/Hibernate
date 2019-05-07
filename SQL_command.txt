@@ -1,0 +1,27 @@
+create table Contact (
+    contactId int not null auto_increment,
+    name varchar(30),
+    primary key (contactId)
+);
+
+create table phone (
+    phoneId int not null auto_increment,
+    contactId int not null ,
+    phoneNumber varchar(50) not null,
+    phoneType enum('WORK', 'HOME', 'CUSTOM') not null,
+    customType varchar(50),
+    isDeleted bit not null default (0),
+    primary key (phoneId),
+    foreign key (contactId) references Contact(contactId)
+);
+
+create table contact_primary_phone(
+     contactId int not null,
+     phoneId int not null,
+     foreign key (phoneId) references phone(phoneId),
+     foreign key (contactId) references Contact(contactId)
+);
+
+delete from contact_primary_phone;
+delete from phone;
+delete from contact;

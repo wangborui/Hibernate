@@ -1110,113 +1110,108 @@
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <table id="278" parent="2" name="contact"/>
-    <table id="279" parent="2" name="phone"/>
-    <table id="280" parent="2" name="primaryphone"/>
-    <column id="281" parent="278" name="id">
+    <table id="279" parent="2" name="contact_primary_phone"/>
+    <table id="280" parent="2" name="phone"/>
+    <column id="281" parent="278" name="contactId">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="282" parent="278" name="first_Name">
+    <column id="282" parent="278" name="name">
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="283" parent="278" name="last_Name">
-      <Position>3</Position>
-      <DataType>varchar(30)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="284" parent="278" name="PRIMARY">
+    <key id="283" parent="278" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
+      <ColNames>contactId</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="285" parent="279" name="id">
+    <column id="284" parent="279" name="contactId">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="285" parent="279" name="phoneId">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="286" parent="279" name="contactId">
+      <ColNames>contactId</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="287" parent="279" name="phoneId">
+      <ColNames>phoneId</ColNames>
+      <Type>btree</Type>
+    </index>
+    <foreign-key id="288" parent="279" name="contact_primary_phone_ibfk_2">
+      <ColNames>contactId</ColNames>
+      <RefSchemaName>examplebank</RefSchemaName>
+      <RefTableName>contact</RefTableName>
+      <RefColNames>contactId</RefColNames>
+    </foreign-key>
+    <foreign-key id="289" parent="279" name="contact_primary_phone_ibfk_1">
+      <ColNames>phoneId</ColNames>
+      <RefSchemaName>examplebank</RefSchemaName>
+      <RefTableName>phone</RefTableName>
+      <RefColNames>phoneId</RefColNames>
+    </foreign-key>
+    <column id="290" parent="280" name="phoneId">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="286" parent="279" name="contact_id">
+    <column id="291" parent="280" name="contactId">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="287" parent="279" name="phone_number">
+    <column id="292" parent="280" name="phoneNumber">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="288" parent="279" name="phone_type">
+    <column id="293" parent="280" name="phoneType">
       <Position>4</Position>
-      <DataType>enum(&apos;WORK&apos;, &apos;HOME&apos;, &apos;PARENTS&apos;, &apos;CUSTOM&apos;)|0e</DataType>
+      <DataType>enum(&apos;WORK&apos;, &apos;HOME&apos;, &apos;CUSTOM&apos;)|0e</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="289" parent="279" name="custom_type">
+    <column id="294" parent="280" name="customType">
       <Position>5</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="290" parent="279" name="isDeleted">
+    <column id="295" parent="280" name="isDeleted">
       <Position>6</Position>
       <DataType>bit(1)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="291" parent="279" name="contact_id">
-      <ColNames>contact_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="292" parent="279" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <foreign-key id="293" parent="279" name="phone_ibfk_1">
-      <ColNames>contact_id</ColNames>
-      <RefSchemaName>examplebank</RefSchemaName>
-      <RefTableName>contact</RefTableName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
-    <column id="294" parent="280" name="contactId">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="295" parent="280" name="phoneId">
-      <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
     <index id="296" parent="280" name="contactId">
       <ColNames>contactId</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="297" parent="280" name="phoneId">
+    <key id="297" parent="280" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
       <ColNames>phoneId</ColNames>
-      <Type>btree</Type>
-    </index>
-    <foreign-key id="298" parent="280" name="primaryphone_ibfk_2">
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="298" parent="280" name="phone_ibfk_1">
       <ColNames>contactId</ColNames>
       <RefSchemaName>examplebank</RefSchemaName>
       <RefTableName>contact</RefTableName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
-    <foreign-key id="299" parent="280" name="primaryphone_ibfk_1">
-      <ColNames>phoneId</ColNames>
-      <RefSchemaName>examplebank</RefSchemaName>
-      <RefTableName>phone</RefTableName>
-      <RefColNames>id</RefColNames>
+      <RefColNames>contactId</RefColNames>
     </foreign-key>
   </database-model>
 </dataSource>
