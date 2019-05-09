@@ -10,7 +10,7 @@ create table phone (
     phoneNumber varchar(50) not null,
     phoneType enum('WORK', 'HOME', 'CUSTOM') not null,
     customType varchar(50),
-    isDeleted bit not null default (0),
+    deleted bit not null default (0),
     primary key (phoneId),
     foreign key (contactId) references Contact(contactId)
 );

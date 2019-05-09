@@ -4,25 +4,26 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import java.util.List;
+import java.util.UUID;
 
 public class ContactDAO {
-    public Long addContactWithPhone(String name, List<Phone> phoneList) {
+    public String addContactWithPhone(String name, List<Phone> phoneList) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = null;
-        Long contactId = null;
+        String contactId = null;
         try {
             transaction = session.beginTransaction();
             Contact contact = new Contact();
+            contact.setContactId(UUID.randomUUID().toString());
             contact.setName(name);
-            //Phone table foreign key restriction, must have id first
-            session.save(contact);
 
             for (Phone phone : phoneList) {
                 phone.setContactId(contact.getContactId());
             }
-
+            System.out.println("Contact" + contact);
+            System.out.println("Phone" + phoneList);
             contact.setPhoneNumber(phoneList);
-            contactId = (Long) session.save(contact);
+            contactId = (String)session.save(contact);
             session.getTransaction().commit();
 
             return contactId;
@@ -64,6 +65,29 @@ public class ContactDAO {
             e.printStackTrace();
         } finally {
             session.close();
+        }
+    }
+
+    public String addContactWithName(String name) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = null;
+        String contactId = null;
+        try {
+            transaction = session.beginTransaction();
+            Contact contact = new Contact();
+            contact.setContactId(UUID.randomUUID().toString());
+            contact.setName(name);
+
+            contactId = (String)session.save(contact);
+            session.getTransaction().commit();
+
+            return contactId;
+        } catch( Exception e ) {
+            transaction.rollback();
+            e.printStackTrace();
+        } finally {
+            session.close();
+            return contactId;
         }
     }
 }
