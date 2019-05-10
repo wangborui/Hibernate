@@ -1,3 +1,2 @@
-.idea*
-*.iml
-Hibernate.iml
+*.idea*
+target/*

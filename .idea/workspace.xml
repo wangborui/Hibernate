@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a6fee0a-272f-455a-bc86-29ae42d7c6b8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/contacts/ContactDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/contacts/ContactDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/contacts/Contact.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/contacts/Contact.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/contact_management/Contact.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/contact_management/ContactTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d0b3b458-bae1-401a-a2be-c03424780f0b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d0b3b458-bae1-401a-a2be-c03424780f0b.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -27,18 +34,18 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="H2" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="H2" type="feb32156:DbDataSourceImpl" />
+        <item name="TEST: database" type="2aa06773:H2ImplModel$Database" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="examplebank: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="H2" type="feb32156:DbDataSourceImpl" />
+        <item name="TEST: database" type="2aa06773:H2ImplModel$Database" />
+        <item name="PUBLIC: schema" type="7f85d983:H2ImplModel$Schema" />
       </path>
     </expand>
     <select />
@@ -47,14 +54,14 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.33757484">
+    <splitter split-orientation="horizontal" split-proportion="0.50047576">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/contacts/Contact.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="350">
-                  <caret line="37" column="1" lean-forward="true" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
+                <state relative-caret-position="481">
+                  <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -79,8 +86,38 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pom.xml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="510">
-                  <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+                <state relative-caret-position="382">
+                  <caret line="43" column="21" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="85">
+                  <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/01dfc540-a74c-4eb2-9160-d4a886f79fd8/console.sql">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/test/java/contact_management/ContactTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="317">
+                  <caret line="66" column="85" selection-start-line="66" selection-start-column="85" selection-end-line="66" selection-end-column="85" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#1115#1124#0" expanded="true" />
+                    <element signature="e#1798#1807#0" expanded="true" />
+                    <element signature="e#2899#2929#1" expanded="true" />
+                    <element signature="e#0#12#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -106,71 +143,41 @@
         </leaf>
       </split-first>
       <split-second>
-        <splitter split-orientation="horizontal" split-proportion="0.4419778">
-          <split-first>
-            <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file pinned="false" current-in-tab="false">
-                <entry file="jar://$USER_HOME$/.ideaLibSources/hibernate-core-5.4.2.Final-sources.jar!/org/hibernate/Transaction.java">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="357">
-                      <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/src/main/java/contacts/ContactExample.java">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="374">
-                      <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-                      <folding>
-                        <element signature="imports" expanded="true" />
-                        <element signature="e#959#960#0" expanded="true" />
-                        <element signature="e#984#985#0" expanded="true" />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="das://d0b3b458-bae1-401a-a2be-c03424780f0b/schema/examplebank/table/contact">
-                  <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-                    <state>
-                      <filtering enabled="true">
-                        <filter text="" />
-                      </filtering>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-first>
-          <split-second>
-            <leaf>
-              <file pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/src/main/java/contacts/ContactDAO.java">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="131">
-                      <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
-                      <folding>
-                        <element signature="imports" expanded="true" />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d0b3b458-bae1-401a-a2be-c03424780f0b/console.sql">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="102">
-                      <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-second>
-        </splitter>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/contact_management/Contact.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="391">
+                  <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/contacts/ContactDAO.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="131">
+                  <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d0b3b458-bae1-401a-a2be-c03424780f0b/console.sql">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret selection-end-line="4" selection-end-column="2" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
       </split-second>
     </splitter>
   </component>
@@ -179,6 +186,9 @@
       <list>
         <option value="Enum" />
         <option value="Class" />
+        <option value="Arquillian JUnit Test Class" />
+        <option value="JUnit5 Test Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -224,14 +234,19 @@
         <option value="$PROJECT_DIR$/src/main/java/school/SchoolExample.java" />
         <option value="$PROJECT_DIR$/src/main/java/contacts/PhoneType.java" />
         <option value="$PROJECT_DIR$/src/main/java/contacts/HibernateUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/contacts/Test.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/d0b3b458-bae1-401a-a2be-c03424780f0b/console.sql" />
         <option value="$PROJECT_DIR$/src/main/java/contacts/Phone.java" />
         <option value="$PROJECT_DIR$/src/main/java/contacts/ContactExample.java" />
         <option value="$PROJECT_DIR$/src/main/java/contacts/Contact.java" />
         <option value="$PROJECT_DIR$/src/main/java/contacts/ContactDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/contact_management/Person.java" />
+        <option value="$PROJECT_DIR$/src/main/java/contact_management/ExampleMain.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/12684534-61ea-44c1-a3ee-0156b188f958/console.sql" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/contact_management/Contact.java" />
+        <option value="$PROJECT_DIR$/src/test/java/contact_management/ContactTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
       </list>
     </option>
   </component>
@@ -252,8 +267,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
-    <option name="y" value="-279" />
+    <option name="x" value="-1818" />
+    <option name="y" value="-223" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -294,6 +309,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="contact_management" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ExampleDynamicDatabaseController" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ExampleDynamicDatabaseController" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="contacts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -318,14 +341,18 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DatabaseDriversLRU" value="mysql&#10;h2" />
     <property name="JPA.DatabaseSchemaImportDialog" value="d0b3b458-bae1-401a-a2be-c03424780f0b" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/hibernate.cfg.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -334,12 +361,18 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="contacts" />
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="contact_management" />
     </key>
     <key name="ImportMappingsDialog.RecentPackages">
       <recent name="hibernate" />
       <recent name="" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="contacts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Borui\Desktop\Ex_Files_Java_DB_Hibernate\Ex_Files_Java_DB_Hibernate\ExampleDynamicDatabaseController\src\main\resources" />
@@ -359,23 +392,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ContactExample">
+  <component name="RunManager" selected="JUnit.ContactTest.testAddMultipleContact_InsertIntoDB_LoadAndVerifyValue">
     <configuration name="App" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="stocks.App" />
       <module name="Hibernate" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ContactExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="contacts.ContactExample" />
-      <module name="Hibernate" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="contacts.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -387,22 +407,89 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SchoolExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="school.SchoolExample" />
+    <configuration name="UserPrompt" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hibernate.UserPrompt" />
       <module name="Hibernate" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="school.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserPrompt" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="hibernate.UserPrompt" />
+    <configuration name="ContactTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Hibernate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="contact_management.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="contact_management" />
+      <option name="MAIN_CLASS_NAME" value="contact_management.ContactTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContactTest.testAddContact" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Hibernate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="contact_management.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="contact_management" />
+      <option name="MAIN_CLASS_NAME" value="contact_management.ContactTest" />
+      <option name="METHOD_NAME" value="testAddContact" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContactTest.testAddContact_AndVerifyValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Hibernate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="contact_management.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="contact_management" />
+      <option name="MAIN_CLASS_NAME" value="contact_management.ContactTest" />
+      <option name="METHOD_NAME" value="testAddContact_AndVerifyValue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContactTest.testAddContact_InsertIntoDB_LoadAndVerifyValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Hibernate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="contact_management.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="contact_management" />
+      <option name="MAIN_CLASS_NAME" value="contact_management.ContactTest" />
+      <option name="METHOD_NAME" value="testAddContact_InsertIntoDB_LoadAndVerifyValue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContactTest.testAddMultipleContact_InsertIntoDB_LoadAndVerifyValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Hibernate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="contact_management.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="contact_management" />
+      <option name="MAIN_CLASS_NAME" value="contact_management.ContactTest" />
+      <option name="METHOD_NAME" value="testAddMultipleContact_InsertIntoDB_LoadAndVerifyValue" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -411,13 +498,19 @@
       <item itemvalue="Application.App" />
       <item itemvalue="Application.UserPrompt" />
       <item itemvalue="Application.CreateTable" />
-      <item itemvalue="Application.SchoolExample" />
-      <item itemvalue="Application.ContactExample" />
+      <item itemvalue="JUnit.ContactTest.test" />
+      <item itemvalue="JUnit.ContactTest.testAddContact" />
+      <item itemvalue="JUnit.ContactTest.testAddContact_AndVerifyValue" />
+      <item itemvalue="JUnit.ContactTest.testAddContact_InsertIntoDB_LoadAndVerifyValue" />
+      <item itemvalue="JUnit.ContactTest.testAddMultipleContact_InsertIntoDB_LoadAndVerifyValue" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ContactExample" />
-        <item itemvalue="Application.SchoolExample" />
+        <item itemvalue="JUnit.ContactTest.testAddMultipleContact_InsertIntoDB_LoadAndVerifyValue" />
+        <item itemvalue="JUnit.ContactTest.testAddContact_InsertIntoDB_LoadAndVerifyValue" />
+        <item itemvalue="JUnit.ContactTest.testAddContact_AndVerifyValue" />
+        <item itemvalue="JUnit.ContactTest.testAddContact" />
+        <item itemvalue="JUnit.ContactTest.test" />
       </list>
     </recent_temporary>
   </component>
@@ -437,12 +530,38 @@
       <workItem from="1557022770585" duration="1741000" />
       <workItem from="1557028177070" duration="3132000" />
       <workItem from="1557151508047" duration="30777000" />
-      <workItem from="1557375090372" duration="3371000" />
+      <workItem from="1557375090372" duration="12462000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="ContactTest_test - 2019.05.10 at 11h 52m 41s.xml">
+      <configuration name="ContactTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ContactTest_testAddContact - 2019.05.10 at 11h 55m 20s.xml">
+      <configuration name="ContactTest.testAddContact" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ContactTest_testAddContact - 2019.05.10 at 12h 05m 09s.xml">
+      <configuration name="ContactTest.testAddContact" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ContactTest_testAddContact_AndVerifyValue - 2019.05.10 at 12h 13m 48s.xml">
+      <configuration name="ContactTest.testAddContact_AndVerifyValue" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ContactTest_testAddContact_AndVerifyValue - 2019.05.10 at 12h 14m 18s.xml">
+      <configuration name="ContactTest.testAddContact_AndVerifyValue" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ContactTest_testAddContact_InsertIntoDB_LoadAndVerifyValue - 2019.05.10 at 12h 27m 46s.xml">
+      <configuration name="ContactTest.testAddContact_InsertIntoDB_LoadAndVerifyValue" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ContactTest_testAddContact_InsertIntoDB_LoadAndVerifyValue - 2019.05.10 at 12h 35m 11s.xml">
+      <configuration name="ContactTest.testAddContact_InsertIntoDB_LoadAndVerifyValue" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ContactTest_testAddMultipleContact_InsertIntoDB_LoadAndVerifyValue - 2019.05.10 at 12h 47m 56s.xml">
+      <configuration name="ContactTest.testAddMultipleContact_InsertIntoDB_LoadAndVerifyValue" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53241000" />
+    <option name="totallyTimeSpent" value="62332000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -454,20 +573,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-279" width="1936" height="1056" extended-state="6" />
+    <frame x="-1928" y="-279" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48832685" visible="true" weight="0.096481875" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7436282" visible="true" weight="0.22654584" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
-      <window_info id="Persistence" order="3" sideWeight="0.51167315" side_tool="true" visible="true" weight="0.096481875" />
+      <window_info id="Persistence" order="3" sideWeight="0.25637183" side_tool="true" visible="true" weight="0.22654584" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.5010661" visible="true" weight="0.44312027" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.5010661" visible="true" weight="0.27735645" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4989339" weight="0.44312027" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -487,7 +606,7 @@
       <window_info anchor="right" id="Maven" order="3" weight="0.12526652" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.10554371" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.21321961" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
@@ -517,74 +636,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://d0b3b458-bae1-401a-a2be-c03424780f0b/schema/examplebank/table/t_class" />
-    <entry file="das://d0b3b458-bae1-401a-a2be-c03424780f0b/schema/examplebank/table/t_class_student_map" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/ContactEntity.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/stocks/Category.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/stocks/Stock.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/school/TStudent.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/school/TClass.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/school/SchoolExample.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/stocks/App.java" />
-    <entry file="das://d0b3b458-bae1-401a-a2be-c03424780f0b/schema/examplebank/table/contact_phone_map" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/school/AddRemoveService.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.4.2.Final/hibernate-core-5.4.2.Final.jar!/org/hibernate/Transaction.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://d0b3b458-bae1-401a-a2be-c03424780f0b/schema/examplebank/table/contact_primary_phone" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://d0b3b458-bae1-401a-a2be-c03424780f0b/schema/examplebank/table/phone" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/UUID.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="340" column="16" selection-start-line="340" selection-start-column="16" selection-end-line="340" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://d0b3b458-bae1-401a-a2be-c03424780f0b/schema/examplebank/table/contact" />
-    <entry file="jar://$USER_HOME$/.ideaLibSources/javax.persistence-api-2.2-sources.jar!/javax/persistence/Column.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="53" column="18" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/contacts/HibernateUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#766#767#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/contacts/PhoneType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/contacts/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -595,13 +646,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.ideaLibSources/hibernate-core-5.4.2.Final-sources.jar!/org/hibernate/Transaction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://d0b3b458-bae1-401a-a2be-c03424780f0b/schema/examplebank/table/contact">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -806,13 +850,6 @@
           <filtering enabled="true">
             <filter text="" />
           </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d0b3b458-bae1-401a-a2be-c03424780f0b/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -820,6 +857,142 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-177">
           <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/151ae85d-b63c-4da9-b5d6-70ff8e6cca44/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/6c028ba8-d896-405f-ba6e-6668422a3dcc/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://6c028ba8-d896-405f-ba6e-6668422a3dcc/database/TEST/schema/INFORMATION_SCHEMA/table/TABLES">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c6cf31c1-ac1c-4c1b-ab9c-d5388743ddfc/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/contacts/ContactDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://c6cf31c1-ac1c-4c1b-ab9c-d5388743ddfc/database/TEST/schema/PUBLIC/table/PERSON">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4de548e5-aed4-4328-ab01-88a128c7ce85/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/cb2a0bf5-3452-4df2-8410-fd768f5981a3/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://cb2a0bf5-3452-4df2-8410-fd768f5981a3/database/EX_FILES_JAVA_DB_HIBERNATE/schema/PUBLIC/table/PERSON">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://12684534-61ea-44c1-a3ee-0156b188f958/database/EX_FILES_JAVA_DB_HIBERNATE/schema/PUBLIC/table/PERSON">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/12684534-61ea-44c1-a3ee-0156b188f958/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://d0b3b458-bae1-401a-a2be-c03424780f0b/schema/examplebank/table/contact">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://d0b3b458-bae1-401a-a2be-c03424780f0b/schema/examplebank/table/contact">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://d0b3b458-bae1-401a-a2be-c03424780f0b/schema/examplebank/table/contact">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://d0b3b458-bae1-401a-a2be-c03424780f0b/schema/examplebank/table/contact">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/contact_management/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/contact_management/ExampleMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#550#580#1" expanded="true" />
+            <element signature="e#0#11#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/01dfc540-a74c-4eb2-9160-d4a886f79fd8/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="43" column="21" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -835,23 +1008,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$USER_HOME$/.ideaLibSources/hibernate-core-5.4.2.Final-sources.jar!/org/hibernate/Transaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d0b3b458-bae1-401a-a2be-c03424780f0b/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="4" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/contacts/Contact.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="37" column="1" lean-forward="true" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
+        <state relative-caret-position="481">
+          <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/contacts/ContactDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/contact_management/Contact.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+        <state relative-caret-position="391">
+          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/contact_management/ContactTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="66" column="85" selection-start-line="66" selection-start-column="85" selection-end-line="66" selection-end-column="85" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1115#1124#0" expanded="true" />
+            <element signature="e#1798#1807#0" expanded="true" />
+            <element signature="e#2899#2929#1" expanded="true" />
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
         </state>
       </provider>
     </entry>
