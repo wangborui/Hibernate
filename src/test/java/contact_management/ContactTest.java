@@ -1,6 +1,5 @@
 package contact_management;
 
-import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.junit.Assert;
@@ -20,25 +19,32 @@ public class ContactTest {
     private String expectedFirstName_two;
     private String expectedLastName;
     private String expectedLastName_two;
+    private List<Phone> phones;
+    private ContactDao contactDao;
+    private TestUtils testUtils;
 
     @Before
     public void setUp() {
+        testUtils = new TestUtils();
         sessionFactory = new Configuration().configure().buildSessionFactory();
+        contactDao = new ContactDao(sessionFactory);
+
         expectedId = UUID.randomUUID().toString();
         expectedId_two = UUID.randomUUID().toString();
         expectedFirstName = "first name";
         expectedFirstName_two = "first name two";
         expectedLastName = "last name";
         expectedLastName_two = "last name two";
+        phones = new ArrayList<Phone>();
     }
 
     @Test
     public void testAddContact_InsertIntoDB_LoadAndVerifyValue() {
-        List<Contact> contacts = new ArrayList<Contact>();
-        Contact contact = new Contact(expectedId, expectedFirstName, expectedLastName);
-        contacts.add(contact);
-        persist(contacts);
-        List<Contact> actualContacts = load();
+        Contact contact = new Contact(expectedId, expectedFirstName, expectedLastName, phones);
+
+        contactDao.save(contact);
+
+        List<Contact> actualContacts = contactDao.getContacts();
         Assert.assertNotNull(actualContacts);
         Assert.assertEquals(actualContacts.size(), 1);
         Assert.assertEquals(actualContacts.get(0).getId(), expectedId);
@@ -49,14 +55,15 @@ public class ContactTest {
     @Test
     public void testAddMultipleContact_InsertIntoDB_LoadAndVerifyValue() {
         List<Contact> contacts = new ArrayList<Contact>();
-        Contact contact = new Contact(expectedId, expectedFirstName, expectedLastName);
-        Contact contact_two = new Contact(expectedId_two, expectedFirstName_two, expectedLastName_two);
+        Contact contact = new Contact(expectedId, expectedFirstName, expectedLastName, phones);
+        Contact contact_two = new Contact(expectedId_two, expectedFirstName_two, expectedLastName_two, phones);
 
         contacts.add(contact);
         contacts.add(contact_two);
 
-        persist(contacts);
-        List<Contact> actualContacts = load();
+        contactDao.save(contacts);
+
+        List<Contact> actualContacts = contactDao.getContacts();
         Assert.assertNotNull(actualContacts);
         Assert.assertEquals(actualContacts.size(), 2);
         Assert.assertEquals(actualContacts.get(0).getId(), expectedId);
@@ -65,29 +72,5 @@ public class ContactTest {
         Assert.assertEquals(actualContacts.get(1).getId(), expectedId_two);
         Assert.assertEquals(actualContacts.get(1).getFirstName(), expectedFirstName_two);
         Assert.assertEquals(actualContacts.get(1).getLastName(), expectedLastName_two);
-    }
-
-    private void persist(List<Contact> contacts) {
-        System.out.println("-- persisting contact --");
-
-        Session session = sessionFactory.openSession();
-        session.beginTransaction();
-        for (Contact contact : contacts) {
-            System.out.printf("- %s%n", contact);
-            session.save(contact);
-        }
-        session.getTransaction().commit();
-    }
-
-    private List<Contact> load() {
-        System.out.println("-- loading contact --");
-        Session session = sessionFactory.openSession();
-        @SuppressWarnings("unchecked")
-        List<Contact> contacts = session.createQuery("FROM Contact ").list();
-        for (Contact contact : contacts) {
-            System.out.printf("- %s%n", contact);
-        }
-        session.close();
-        return contacts;
     }
 }

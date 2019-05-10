@@ -11,5 +11,6 @@
     <property name="show_sql">true</property>
     <property name="hbm2ddl.auto">create</property>
     <mapping class="contact_management.Contact"/>
+    <mapping class="contact_management.Phone"/>
   </session-factory>
 </hibernate-configuration>
