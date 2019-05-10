@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1a6fee0a-272f-455a-bc86-29ae42d7c6b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/contact_management/Contact.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/contact_management/ContactTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d0b3b458-bae1-401a-a2be-c03424780f0b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d0b3b458-bae1-401a-a2be-c03424780f0b.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
-    </list>
+    <list default="true" id="1a6fee0a-272f-455a-bc86-29ae42d7c6b8" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -267,8 +257,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1818" />
-    <option name="y" value="-223" />
+    <option name="x" value="-1928" />
+    <option name="y" value="-279" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -530,7 +520,7 @@
       <workItem from="1557022770585" duration="1741000" />
       <workItem from="1557028177070" duration="3132000" />
       <workItem from="1557151508047" duration="30777000" />
-      <workItem from="1557375090372" duration="12462000" />
+      <workItem from="1557375090372" duration="13074000" />
     </task>
     <servers />
   </component>
@@ -561,7 +551,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62332000" />
+    <option name="totallyTimeSpent" value="62944000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -573,7 +563,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-279" width="1936" height="1056" extended-state="6" />
+    <frame x="-1928" y="-279" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7436282" visible="true" weight="0.22654584" />
@@ -1032,16 +1022,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/contact_management/Contact.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/contact_management/ContactTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
@@ -1052,6 +1032,16 @@
             <element signature="e#1798#1807#0" expanded="true" />
             <element signature="e#2899#2929#1" expanded="true" />
             <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/contact_management/Contact.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
