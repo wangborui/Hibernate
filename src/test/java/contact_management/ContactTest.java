@@ -75,22 +75,54 @@ public class ContactTest {
 
     @Test
     public void testUpdateContact_InsertIntoDB_updateExistingContact_LoadAndVerifyValue() {
-        Contact contact = testUtils.getRandomContact(expectedId);
-        String actualId = contactDao.save(contact);
-        contactDao.update(testUtils.getRandomContact(actualId));
+        Contact expectedContact = testUtils.getRandomContact(expectedId);
+        String actualId = contactDao.save(expectedContact);
+        Contact updatedContact = testUtils.getRandomContact(actualId);
+
+        contactDao.update(updatedContact);
+        List<Contact> actualContacts = contactDao.getContacts();
+        Assert.assertNotNull(actualContacts);
+        Assert.assertEquals(actualContacts.size(), 1);
+        Assert.assertEquals(actualContacts.get(0).getId(), updatedContact.getId());
+        Assert.assertEquals(actualContacts.get(0).getFirstName(), updatedContact.getFirstName());
+        Assert.assertEquals(actualContacts.get(0).getLastName(), updatedContact.getLastName());
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void testUpdateContact_InsertIntoDB_updateWithNonExistingId_ShouldThrowException() {
         Contact contact = testUtils.getRandomContact(expectedId);
-        String actualId = contactDao.save(contact);
+        contactDao.save(contact);
         contactDao.update(testUtils.getRandomContact("Random"));
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void testUpdateContact_InsertIntoDB_updateWithnullId_ShouldThrowException() {
+    public void testUpdateContact_InsertIntoDB_updateWithNullId_ShouldThrowException() {
         Contact contact = testUtils.getRandomContact(expectedId);
-        String actualId = contactDao.save(contact);
+        contactDao.save(contact);
         contactDao.update(testUtils.getRandomContact(null));
+    }
+
+    @Test
+    public void testDeleteContact_InsertIntoDB_deleteWithExistingId_shouldBeOk() {
+        Contact contact = new Contact(expectedId, expectedFirstName, expectedLastName, phones);
+
+        contactDao.save(contact);
+        contactDao.delete(contact);
+        List<Contact> actualContacts = contactDao.getContacts();
+
+        Assert.assertNotNull(actualContacts);
+        Assert.assertTrue(actualContacts.isEmpty());
+    }
+
+    @Test
+    public void testDeleteContact_InsertIntoDB_deleteWithNonExistingId_shouldNotbeDeleted() {
+        Contact contact = new Contact(expectedId, expectedFirstName, expectedLastName, phones);
+
+        contactDao.save(contact);
+        contactDao.delete(testUtils.getRandomContact("nonexisting"));
+        List<Contact> actualContacts = contactDao.getContacts();
+
+        Assert.assertNotNull(actualContacts);
+        Assert.assertEquals(1, actualContacts.size());
     }
 }

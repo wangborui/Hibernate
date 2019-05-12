@@ -3,11 +3,11 @@ package contact_management;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.ArgumentCaptor;
 
 import java.util.Arrays;
 import java.util.List;
@@ -26,7 +26,7 @@ public class ContactDaoTest {
     private String expectedIdTwo;
     private List<String> expectedIds;
     private TestUtils testUtils;
-    private Contact contact;
+    private Contact expectedContact;
     private List<Contact> expectedContacts;
 
     @Before
@@ -35,7 +35,7 @@ public class ContactDaoTest {
         expectedIdOne = testUtils.getUUID();
         expectedIdTwo = testUtils.getUUID();
         contactDao = new ContactDao(sessionFactoryMock);
-        contact = testUtils.getRandomContact(expectedIdOne);
+        expectedContact = testUtils.getRandomContact(expectedIdOne);
         expectedContacts = testUtils.getRandomContacts(Arrays.asList(expectedIdOne, expectedIdTwo));
         expectedIds = Arrays.asList(expectedIdOne, expectedIdTwo);
 
@@ -49,7 +49,7 @@ public class ContactDaoTest {
 
     @Test
     public void testContactDao_saveSingleEntry_ShouldReturnId() {
-        String actualId = contactDao.save(contact);
+        String actualId = contactDao.save(expectedContact);
         Assert.assertEquals(actualId, expectedIdOne);
     }
 
@@ -69,5 +69,34 @@ public class ContactDaoTest {
     public void testContactDao_updateContact_withNonExistingId_ShouldThrowException() {
         Contact updatedContact = testUtils.getRandomContact("Random");
         contactDao.update(updatedContact);
+    }
+
+    @Test
+    public void testContactDao_updateContact_withExistingId_ShouldUpdateSession() {
+        Contact existingContact = testUtils.getRandomContact(expectedContact.getId());
+        ArgumentCaptor<Contact> contactArgumentCaptor = ArgumentCaptor.forClass(Contact.class);
+        doNothing().when(sessionMock).update(contactArgumentCaptor.capture());
+        when(sessionMock.get(eq(Contact.class), eq(expectedContact.getId()))).thenReturn(existingContact);
+
+        contactDao.update(expectedContact);
+
+        verify(sessionMock, times(1)).update(isA(Contact.class));
+        Assert.assertEquals(expectedContact, contactArgumentCaptor.getValue());
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testContactDao_deleteContact_withInvalidInput_ShouldThrowException() {
+        contactDao.delete(null);
+    }
+
+    @Test
+    public void testContactDao_deleteContact_withValidInput_shouldDeleteRecord() {
+        ArgumentCaptor<Contact> contactArgumentCaptor = ArgumentCaptor.forClass(Contact.class);
+        doNothing().when(sessionMock).delete(contactArgumentCaptor.capture());
+
+        contactDao.delete(expectedContact);
+
+        verify(sessionMock, times(1)).delete(isA(Contact.class));
+        Assert.assertEquals(expectedContact, contactArgumentCaptor.getValue());
     }
 }

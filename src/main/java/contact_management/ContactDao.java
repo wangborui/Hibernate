@@ -28,6 +28,9 @@ public class ContactDao {
     }
 
     public String save(Contact contact) {
+        if (!isContactValid(contact)) {
+            throw new IllegalArgumentException("Contact is invalid");
+        }
         Session session = sessionFactory.openSession();
         session.beginTransaction();
         String res = "";
@@ -65,6 +68,16 @@ public class ContactDao {
         }
     }
 
+    public void delete(Contact contact) {
+        if (!isContactValid(contact)) {
+            throw new IllegalArgumentException("Contact is invalid");
+        }
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+        session.delete(contact);
+        session.getTransaction().commit();
+        session.close();
+    }
     private boolean isContactValid(Contact contact) {
         return contact != null && !StringUtils.isBlank(contact.getId());
     }
