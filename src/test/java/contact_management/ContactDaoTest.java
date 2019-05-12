@@ -3,6 +3,7 @@ package contact_management;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
 import org.junit.Assert;
 import org.junit.Before;
@@ -62,5 +63,11 @@ public class ContactDaoTest {
     public void testContactDao_getContacts_ShouldReturnValidContacts() {
         List<Contact> actualContacts = contactDao.getContacts();
         Assert.assertEquals(actualContacts, expectedContacts);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testContactDao_updateContact_withNonExistingId_ShouldThrowException() {
+        Contact updatedContact = testUtils.getRandomContact("Random");
+        contactDao.update(updatedContact);
     }
 }

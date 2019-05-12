@@ -8,7 +8,6 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 public class ContactTest {
 
@@ -29,8 +28,8 @@ public class ContactTest {
         sessionFactory = new Configuration().configure().buildSessionFactory();
         contactDao = new ContactDao(sessionFactory);
 
-        expectedId = UUID.randomUUID().toString();
-        expectedId_two = UUID.randomUUID().toString();
+        expectedId = testUtils.getUUID();
+        expectedId_two = testUtils.getUUID();
         expectedFirstName = "first name";
         expectedFirstName_two = "first name two";
         expectedLastName = "last name";
@@ -72,5 +71,26 @@ public class ContactTest {
         Assert.assertEquals(actualContacts.get(1).getId(), expectedId_two);
         Assert.assertEquals(actualContacts.get(1).getFirstName(), expectedFirstName_two);
         Assert.assertEquals(actualContacts.get(1).getLastName(), expectedLastName_two);
+    }
+
+    @Test
+    public void testUpdateContact_InsertIntoDB_updateExistingContact_LoadAndVerifyValue() {
+        Contact contact = testUtils.getRandomContact(expectedId);
+        String actualId = contactDao.save(contact);
+        contactDao.update(testUtils.getRandomContact(actualId));
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testUpdateContact_InsertIntoDB_updateWithNonExistingId_ShouldThrowException() {
+        Contact contact = testUtils.getRandomContact(expectedId);
+        String actualId = contactDao.save(contact);
+        contactDao.update(testUtils.getRandomContact("Random"));
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testUpdateContact_InsertIntoDB_updateWithnullId_ShouldThrowException() {
+        Contact contact = testUtils.getRandomContact(expectedId);
+        String actualId = contactDao.save(contact);
+        contactDao.update(testUtils.getRandomContact(null));
     }
 }
