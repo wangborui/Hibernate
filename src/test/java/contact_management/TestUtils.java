@@ -1,8 +1,6 @@
 package contact_management;
 
 import com.github.javafaker.Faker;
-import contact_management.Contact;
-import contact_management.Phone;
 import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
