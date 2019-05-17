@@ -31,4 +31,8 @@ public class TestUtils {
     public String getUUID() {
         return UUID.randomUUID().toString();
     }
+
+    public Phone getPhone() {
+        return new Phone(getUUID(), "1234566", "N/A", PhoneType.HOME, false);
+    }
 }

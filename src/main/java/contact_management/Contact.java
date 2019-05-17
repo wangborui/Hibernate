@@ -5,8 +5,10 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
@@ -27,7 +29,15 @@ public class Contact {
     private String firstName;
     @Column
     private String lastName;
-    @ManyToMany
-    @JoinTable(name = "Contact_Phone")
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "Contact_Phone"
+    )
     private List<Phone> phoneList;
+
+    public Contact(String id, String firstName, String lastName) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
 }

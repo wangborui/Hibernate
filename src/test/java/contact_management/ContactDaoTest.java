@@ -10,6 +10,7 @@ import org.junit.Test;
 import org.mockito.ArgumentCaptor;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import static org.mockito.Matchers.anyObject;
@@ -19,7 +20,8 @@ public class ContactDaoTest {
     private SessionFactory sessionFactoryMock = mock(SessionFactory.class);
     private Session sessionMock = mock(Session.class);
     private Transaction transactionMock = mock(Transaction.class);
-    private Query queryMock = mock(Query.class);
+    private Query queryMockContact = mock(Query.class);
+    private Query queryMockPhone = mock(Query.class);
 
     private ContactDao contactDao;
     private String expectedIdOne;
@@ -28,6 +30,7 @@ public class ContactDaoTest {
     private TestUtils testUtils;
     private Contact expectedContact;
     private List<Contact> expectedContacts;
+    private List<Phone> expectedPhones;
 
     @Before
     public void setUp() {
@@ -37,14 +40,18 @@ public class ContactDaoTest {
         contactDao = new ContactDao(sessionFactoryMock);
         expectedContact = testUtils.getRandomContact(expectedIdOne);
         expectedContacts = testUtils.getRandomContacts(Arrays.asList(expectedIdOne, expectedIdTwo));
+        expectedPhones = Collections.singletonList(testUtils.getPhone());
+
         expectedIds = Arrays.asList(expectedIdOne, expectedIdTwo);
 
         when(sessionFactoryMock.openSession()).thenReturn(sessionMock);
         when(sessionMock.beginTransaction()).thenReturn(transactionMock);
         when(sessionMock.save(anyObject())).thenReturn(expectedIdOne).thenReturn(expectedIdTwo);
         when(sessionMock.getTransaction()).thenReturn(transactionMock);
-        when(sessionMock.createQuery(anyString())).thenReturn(queryMock);
-        when(queryMock.list()).thenReturn(expectedContacts);
+        when(sessionMock.createQuery(eq("FROM Contact "))).thenReturn(queryMockContact);
+        when(queryMockContact.list()).thenReturn(expectedContacts);
+        when(sessionMock.createQuery(eq("FROM Phone "))).thenReturn(queryMockPhone);
+        when(queryMockPhone.list()).thenReturn(expectedPhones);
     }
 
     @Test
@@ -63,6 +70,12 @@ public class ContactDaoTest {
     public void testContactDao_getContacts_ShouldReturnValidContacts() {
         List<Contact> actualContacts = contactDao.getContacts();
         Assert.assertEquals(actualContacts, expectedContacts);
+    }
+
+    @Test
+    public void testContactDao_getPhones_ShouldReturnValidPhones() {
+        List<Phone> actualPhones = contactDao.getPhones();
+        Assert.assertEquals(actualPhones, expectedPhones);
     }
 
     @Test(expected = IllegalArgumentException.class)
