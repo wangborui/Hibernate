@@ -49,6 +49,15 @@ public class ContactDao {
         return contacts;
     }
 
+    public List<Phone> getPhones() {
+        System.out.println("-- loading contact --");
+        Session session = sessionFactory.openSession();
+        @SuppressWarnings("unchecked")
+        List<Phone> phones = session.createQuery("FROM Phone ").list();
+        session.close();
+        return phones;
+    }
+
     public void update(Contact contact) {
         if (!isContactValid(contact)) {
             throw new IllegalArgumentException("Contact is invalid");
