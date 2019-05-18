@@ -1,4 +1,6 @@
 # Hibernate
+## Relationship UML
+![alt text](https://github.com/wangborui/Hibernate/blob/master/Relationships.png)
 ## POJO Objects
 * **Contact**
   * Id(NotNull)
