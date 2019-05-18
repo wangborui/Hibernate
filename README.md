@@ -29,14 +29,29 @@
     * This method returns a list of all phones in the current database.
 
 ## Operation Example
-* Example 1
+* Save
   * Input 
     * `inputContact = {"123", "John", "Doe", [Phone = {"1t3", "123456789", WORK, "", false}]}`
   * Operation
     * ContactDao.save(inputContact)
   * Output 
     * "123"
-
+* Update
+  * Input 
+    * `inputContact = {"123", "John", "Doe", [Phone = {"1t3", "123456789", WORK, "", false}]}`
+  * Operation
+    * ContactDao.update(inputContact)
+  * Output 
+    * Success
+    * IllegalArgumentException if contact id does not exist
+* Delete
+  * Input 
+    * `inputContact = {"123", "John", "Doe", [Phone = {"1t3", "123456789", WORK, "", false}]}`
+  * Operation
+    * ContactDao.delete(inputContact)
+  * Output 
+    * Success
+    * IllegalArgumentException if contact id does not exist
 
   
   
