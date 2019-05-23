@@ -1,16 +1,20 @@
-package contact_management;
+package com.contact.application.service;
 
+import com.contact.application.model.Contact;
+import com.contact.application.model.Phone;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.apache.commons.lang3.StringUtils;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Data
 @AllArgsConstructor
+@Component
 public class ContactDao {
     private SessionFactory sessionFactory;
 
@@ -75,6 +79,16 @@ public class ContactDao {
             session.getTransaction().commit();
             session.close();
         }
+    }
+
+    public Contact update(Contact contact, String id) {
+        //ToDo: Create update method for Dao
+        return null;
+    }
+
+    public Contact delete(Contact contact, String id) {
+        //ToDo: Create delete method for Dao
+        return null;
     }
 
     public void delete(Contact contact) {

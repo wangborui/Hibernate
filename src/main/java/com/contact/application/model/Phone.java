@@ -1,4 +1,4 @@
-package contact_management;
+package com.contact.application.model;
 
 import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
@@ -14,7 +14,6 @@ import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity

@@ -1,4 +1,4 @@
-package contact_management;
+package com.contact.application.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

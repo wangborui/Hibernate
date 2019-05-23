@@ -1,5 +1,7 @@
-package contact_management;
+package com.contact.application.service;
 
+import com.contact.application.model.Contact;
+import com.contact.application.model.Phone;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
