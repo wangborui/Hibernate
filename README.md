@@ -28,7 +28,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Running the tests
 
-In Intellij, run all tests under Hibernate/src/test/java/contact_management/ folder
+In Intellij, run all tests under Hibernate/src/test/java/com.contact.application.controller.contact_management/ folder
 
 ### Break down into end to end tests
 

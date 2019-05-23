@@ -1,5 +1,8 @@
-package contact_management;
+package com.contact.application.service;
 
+import com.contact.application.model.Contact;
+import com.contact.application.model.Phone;
+import com.contact.application.model.PhoneType;
 import com.github.javafaker.Faker;
 import lombok.NoArgsConstructor;
 

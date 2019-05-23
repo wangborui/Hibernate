@@ -10,7 +10,7 @@
     <property name="dialect">org.hibernate.dialect.H2Dialect</property>
     <property name="show_sql">true</property>
     <property name="hbm2ddl.auto">create</property>
-    <mapping class="contact_management.Contact"/>
-    <mapping class="contact_management.Phone"/>
+    <mapping class="com.contact.application.model.Contact"/>
+    <mapping class="com.contact.application.model.Phone"/>
   </session-factory>
 </hibernate-configuration>
